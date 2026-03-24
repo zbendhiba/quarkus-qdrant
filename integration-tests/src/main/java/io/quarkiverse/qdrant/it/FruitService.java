@@ -9,7 +9,7 @@ import java.util.UUID;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
-import io.quarkiverse.qdrant.runtime.QdrantRestApi;
+import io.quarkiverse.qdrant.runtime.QdrantRestClientApi;
 import io.quarkiverse.qdrant.runtime.model.DeleteRequest;
 import io.quarkiverse.qdrant.runtime.model.PointStruct;
 import io.quarkiverse.qdrant.runtime.model.ScoredPoint;
@@ -23,7 +23,7 @@ public class FruitService {
     private static final String COLLECTION = "fruits";
 
     @Inject
-    QdrantRestApi qdrant;
+    QdrantRestClientApi qdrant;
 
     public String index(Fruit fruit) {
         if (fruit.id == null) {

@@ -12,17 +12,17 @@ import jakarta.inject.Singleton;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
 @ApplicationScoped
-public class QdrantClientProducer {
+public class QdrantRestClientProducer {
 
     @Inject
-    QdrantClientConfig config;
+    QdrantRestClientConfig config;
 
-    private QdrantRestApi client;
+    private QdrantRestClientApi client;
 
     @Produces
     @Singleton
     @Default
-    public QdrantRestApi qdrantRestApi() {
+    public QdrantRestClientApi qdrantRestClientApi() {
         String scheme = config.useTls() ? "https" : "http";
         URI baseUri = URI.create(scheme + "://" + config.host() + ":" + config.port());
 
@@ -31,7 +31,7 @@ public class QdrantClientProducer {
 
         config.apiKey().ifPresent(key -> builder.header("api-key", key));
 
-        client = builder.build(QdrantRestApi.class);
+        client = builder.build(QdrantRestClientApi.class);
         return client;
     }
 

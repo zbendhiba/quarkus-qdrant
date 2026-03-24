@@ -16,7 +16,7 @@ import io.quarkiverse.qdrant.runtime.model.UpsertRequest;
 @Path("/collections")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public interface QdrantRestApi {
+public interface QdrantRestClientApi {
 
     @PUT
     @Path("/{collection}/points")
