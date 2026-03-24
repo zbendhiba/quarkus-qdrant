@@ -7,10 +7,10 @@
         <version>21</version>
     </parent>
     <groupId>io.quarkiverse.qdrant</groupId>
-    <artifactId>quarkus-qdrant-parent</artifactId>
+    <artifactId>quarkus-qdrant-rest-client-parent</artifactId>
     <version>999-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Quarkus Qdrant - Parent</name>
+    <name>Quarkus Qdrant REST Client - Parent</name>
     <modules>
         <module>deployment</module>
         <module>runtime</module>

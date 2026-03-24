@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.quarkiverse.qdrant</groupId>
-        <artifactId>quarkus-qdrant-parent</artifactId>
+        <artifactId>quarkus-qdrant-rest-client-parent</artifactId>
         <version>999-SNAPSHOT</version>
     </parent>
 
-    <artifactId>quarkus-qdrant-deployment</artifactId>
-    <name>Quarkus Qdrant - Deployment</name>
+    <artifactId>quarkus-qdrant-rest-client-deployment</artifactId>
+    <name>Quarkus Qdrant REST Client - Deployment</name>
 
     <dependencies>
         <dependency>
@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>io.quarkiverse.qdrant</groupId>
-            <artifactId>quarkus-qdrant</artifactId>
+            <artifactId>quarkus-qdrant-rest-client</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
