@@ -1,0 +1,14 @@
+---
+artifact: ${project.groupId}:${project.artifactId}:${project.version}
+name: "Qdrant REST Client"
+description: "Qdrant vector database client for Quarkus"
+metadata:
+  keywords:
+    - "qdrant"
+    - "vector-database"
+    - "rest-client"
+  categories:
+    - "data"
+  status: "experimental"
+  config:
+    - "quarkus.qdrant."
